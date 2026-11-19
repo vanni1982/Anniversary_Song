@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conquering More Mountains - Download Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .header-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header-title p {
+            font-size: 14px;
+            color: #4a5568;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .header-title h1 {
+            font-size: 32px;
+            color: #1a202c;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .cards-container {
+            display: flex;
+            gap: 25px;
+            max-width: 850px;
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 35px 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex: 1;
+            min-width: 280px;
+            max-width: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-container {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .mp3-card h2 { color: #2b6cb0; }
+        .mp3-card .download-btn {
+            background: #3182ce;
+            box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
+        }
+        .mp3-card .download-btn:hover { background: #2b6cb0; }
+
+        .mp4-card h2 { color: #b83280; }
+        .mp4-card .download-btn {
+            background: #d63f8a;
+            box-shadow: 0 4px 12px rgba(214, 63, 138, 0.3);
+        }
+        .mp4-card .download-btn:hover { background: #b83280; }
+
+        h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #4a5568;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .video-wrapper {
+            width: 100%;
+            max-width: 560px;
+            margin: 40px auto 10px auto;
+            padding: 0 15px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .yt-app-btn:active {
+            transform: scale(0.95);
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #4a5568;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .txt {
+            animation: randomBlink 1s linear infinite;
+            margin-top: 15px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        @keyframes randomBlink {
+            0%   { opacity: 1; color: #e53e3e; }
+            16%  { opacity: 0; }
+            33%  { opacity: 1; color: #38a169; }
+            49%  { opacity: 0; }
+            66%  { opacity: 1; color: #3182ce; }
+            82%  { opacity: 0; }
+            100% { opacity: 1; color: #e53e3e; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-title">
+        <p>CBBC Anniversary Song</p>
+        <h1>Conquering More Mountains</h1>
+    </div>
+
+    <div class="cards-container">
+        
+        <!-- MP3 CARD -->
+        <div class="card mp3-card">
+            <div>
+                <div class="icon-container">🎵</div>
+                <h2>MP3 Audio</h2>
+                <p class="description">I-download ang audio na bersyon para sa pakikinig o pagpa-practice ng kanta kahit walang internet.</p>
+            </div>
+            <a href="conquering.mp3" class="download-btn" download="conquering.mp3">
+                📥 I-download ang MP3
+            </a>
+        </div>
+
+        <!-- MP4 CARD -->
+        <div class="card mo mp4-card">
+            <div>
+                <div class="icon-container">🎥</div>
+                <h2>MP4 Video</h2>
+                <p class="description">I-download ang buong video na bersyon na may kasamang lyrics.</p>
+            </div>
+            <a href="conquering.mp4" class="download-btn" download="conquering.mp4">
+                📥 I-download ang MP4
+            </a>
+        </div>
+        
+    </div>
+
+<!-- VIDEO SECTION -->
+<div class="video-wrapper">
+    <!-- Ginamit ang inline style para maging sakto ang sukat sa cellphone at desktop -->
+    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px;">
+        <iframe 
+            src="https://www.youtube.com/embed/Y67CZHUhcEo" 
+            title="Conquering More Mountains Instrumental + Lyrics" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        </iframe>
+    </div>
+</div>
+        <!-- NALAGAY NA PO DITO ANG DIRETSONG BUTTON SA APP -->
+    <div style="text-align: center; margin: 0 auto 30px auto;">
+        <a href="https://youtu.be/4J8kEzQpfK8?si=FllCNwWkbkbraQhB" class="yt-app-btn" target="_blank" style="
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ff0000;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 15px;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+            text-align: center;
+        ">
+            🔺 Panoorin Direk sa YouTube App
+        </a>
+    </div>
+
+    <div class="footer">
+        Kanta para sa ating Church Anniversary
+    </div>
+    <br><br>
+    <!-- DITO NAGSISIMULA ANG CSS (Estilo at Animation) -->
+<style>
+  /* Container para magkatabi ang kamay at text */
+  .link-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+  /* Code para sa gumagalaw na kamay */
+  .pointing-hand {
+    font-size: 24px;
+    /* Pinapagalaw nito ang kamay pabalik-balik */
+    animation: ituro 0.6s infinite alternate; 
+  }
+
+  /* Ang mismong galaw ng kamay (pakanan at pakaliwa) */
+  @keyframes ituro {
+    from { transform: translateX(0); }
+    to { transform: translateX(10px); }
+  }
+
+  /* Estilo ng link para maging mukhang clickable talaga */
+  .clickable-link {
+    color: #0000ee; /* Kulay blue */
+    text-decoration: underline; /* May salungguhit para halatang link */
+    font-weight: bold;
+  }
+</style>
+<!-- DITO NAGTATAPOS ANG CSS -->
+
+
+<!-- DITO NAGSISIMULA ANG CSS (Estilo at Animation) -->
+<style>
+  /* Container para mai-center ang kamay at ang link */
+  .center-link-container {
+    display: flex;
+    flex-direction: column; /* Pinagpapatong ang kamay at text */
+    align-items: center;    /* Inilalagay sa mismong gitna (center) */
+    justify-content: center;
+    text-align: center;
+    margin: 25px 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Code para sa kamay na nakaturo pababa */
+  .pointing-down-hand {
+    font-size: 32px; /* Nilakihan nang kaunti para mas madaling makita */
+    margin-bottom: 5px;
+    /* Pinapagalaw nito ang kamay pataas at pababa */
+    animation: ituroPababa 0.5s infinite alternate;
+  }
+
+  /* Ang mismong galaw ng kamay (pataas at pababa) */
+  @keyframes ituroPababa {
+    from { transform: translateY(0); }
+    to { transform: translateY(8px); } /* Bababa ng 8 pixels */
+  }
+
+  /* Estilo ng link para maging malinaw na blue text */
+  .clickable-link {
+    color: #0000ee; /* Kulay blue */
+    text-decoration: underline; /* May salungguhit para halatang link */
+    font-size: 20px; /* Mas pinalaki para malinaw sa mga matatanda */
+    font-weight: bold;
+  }
+
+  /* Effect kapag itinapat ang mouse ng computer */
+  .clickable-link:hover {
+    color: #0000aa; /* Medyo magdidilim ang blue kapag itinapat ang mouse */
+  }
+</style>
+<!-- DITO NAGTATAPOS ANG CSS -->
+
+
+<!-- DITO NAMAN ANG HTML (Ang makikita sa webpage) -->
+<div class="center-link-container">
+  <!-- Ang kamay na nakaturo pababa (👇) -->
+  <span class="pointing-down-hand">👇</span>
+  
+  <!-- Ang mismong clickable sentence link sa baba nito -->
+  <a href="https://youtu.be/4J8kEzQpfK8?si=FllCNwWkbkbraQhB" target="_blank" class="clickable-link">
+    Pindutin dito para mapanood ang video
+  </a>
+</div>
+
+    <!-- DITO NAGSISIMULA ANG CSS (Estilo at Animation) -->
+<style>
+    .win98-center-container { display: flex; justify-content: center; align-items: center; text-align: center; margin: 40px 0; }
+    .win98-container { position: relative; display: inline-block; }
+    .my-button { display: inline-block; padding: 12px 28px; font-size: 16px; font-family: Arial, sans-serif; font-weight: bold; color: black !important; background-color: #c0c0c0; text-decoration: none; text-transform: uppercase; border-top: 2px solid #fff; border-left: 2px solid #fff; border-right: 2px solid #808080; border-bottom: 2px solid #808080; box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #808080; }
+    .my-button:active { border-top: 2px solid #808080; border-left: 2px solid #808080; border-right: 2px solid #fff; border-bottom: 2px solid #fff; box-shadow: inset 1px 1px 0px #000; padding: 13px 27px 11px 29px; }
+    .pointer-wrapper { position: absolute; pointer-events: none; top: 60px; left: 105%; z-index: 10; animation: turoAtPindot 2.5s infinite ease-in-out; }
+    .windows-98-pointer { width: 2px; height: 2px; background: transparent; box-shadow: 0px 0px #000, 0px 2px #000, 2px 2px #fff, 0px 4px #000, 2px 4px #fff, 4px 4px #fff, 0px 6px #000, 2px 6px #fff, 4px 6px #fff, 6px 6px #fff, 0px 8px #000, 2px 8px #fff, 4px 8px #fff, 6px 8px #fff, 8px 8px #fff, 0px 10px #000, 2px 10px #fff, 4px 10px #fff, 6px 10px #fff, 8px 10px #fff, 10px 10px #fff, 0px 12px #000, 2px 12px #fff, 4px 12px #fff, 6px 12px #fff, 8px 12px #fff, 10px 12px #fff, 12px 12px #fff, 0px 14px #000, 2px 14px #fff, 4px 14px #fff, 6px 14px #fff, 8px 14px #fff, 10px 14px #fff, 12px 14px #fff, 14px 14px #fff, 0px 16px #000, 2px 16px #fff, 4px 16px #fff, 6px 16px #fff, 8px 16px #fff, 10px 16px #fff, 12px 16px #000, 0px 18px #000, 2px 18px #fff, 4px 18px #fff, 6px 18px #000, 8px 18px #000, 10px 18px #000, 12px 18px #000, 0px 20px #000, 2px 20px #fff, 4px 20px #000, 12px 20px #000, 14px 20px #000, 0px 22px #000, 2px 22px #000, 14px 22px #000, 16px 22px #000, 0px 24px #000, 14px 24px #000, 16px 24px #000; }
+    
+    @keyframes turoAtPindot {
+        0% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(-250px, -45px) scale(1); } /* Mas malayong abot pakaliwa */
+        65% { transform: translate(-250px, -45px) scale(0.85); transform-origin: 0px 0px; }
+        75% { transform: translate(-250px, -45px) scale(1); transform-origin: 0px 0px; }
+        100% { transform: translate(0, 0) scale(1); }
+    }
+</style>
+
+<div class="win98-center-container">
+    <div class="win98-container">
+        <a href="https://youtu.be/jN_Thf_iuRg?si=oSaOBBxmVYqegufu" target="_blank" class="my-button">Pindutin Dito Para Mapanood ang Tenor Video</a>
+        <div class="pointer-wrapper"><div class="windows-98-pointer"></div></div>
+    </div>
+</div>
+    
+
+    <br>
+    <h1 class="txt">By: VANNI</h1>
+    
+</body>
+</html>
